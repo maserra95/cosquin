@@ -10,37 +10,27 @@ body {
 
 /* Encabezado */
 header h1 {
-    font-size: 2.5em;
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 20px;
     background: black;
     display: inline-block;
-    padding: 15px 30px;
     border-radius: 10px;
+    font-size: 2em;
+    padding: 10px 20px;
 }
 
 /* Tabla */
 table {
-    width: 90%;
-    max-width: 1200px;
+    width: 100%;
     border-collapse: collapse;
     background: white;
     color: black;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
+    border-radius: 20px;
     overflow: hidden;
-}
-
-thead {
-    display: table; /* to take the same width as tr */
-    width: calc(100% - 17px); /* - 17px because of the scrollbar width */
-}
-
-tbody {
-    display: block; /* to enable vertical scrolling */
-    max-height: 500px; /* e.g. */
-    overflow-y: scroll; /* keeps the scrollbar even if it doesn't need it; display purpose */
+    font-size: 14px;
+    margin: 0 auto;
 }
 
 /* Encabezado de la tabla */
@@ -48,17 +38,34 @@ th {
     background: black;
     color: white;
     text-transform: uppercase;
-    padding: 15px;
     font-size: 14px;
+    padding: 8px;
+    width: 15%;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+}
+
+/* Celdas de la tabla */
+td {
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    border: 1px solid #ddd;
+    padding: 8px;
+    width: 15%;
+    box-sizing: border-box;  
+}
+
+.hora{
+    width:10%;
 }
 
 /* Contenedor de la tabla */
 .schedule {
     display: flex;
-    justify-content: center;
     margin: 20px auto;
     overflow: auto;
-    height: 500px;
+    height: 450px;
 }
 
 .scheduled thead th {
@@ -66,32 +73,19 @@ th {
     top: 0;
 }
 
-/* Celdas de la tabla */
-td {
-    padding: 10px;
-    text-align: center;
-    font-size: 14px;
-    font-weight: bold;
-    border: 1px solid #ddd;
-}
-
 /* Artistas en recuadros */
 .artist {
     background: #ffcc00;
     color: black;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 14px;
     border-radius: 5px;
     text-transform: uppercase;
 }
 
-/* Alternancia de colores en filas */
-tbody tr:nth-child(odd) {
-    background: #f3f3f3;
-}
-
-tbody tr:nth-child(even) {
-    background: #ffe6cc;
+.empty{
+    background: white;
+    border-radius: 5px;
 }
 
 /* Botón de cambio de día */
@@ -99,8 +93,8 @@ button {
     background: #ffcc00;
     color: black;
     border: none;
-    padding: 15px 30px;
-    font-size: 18px;
+    font-size: 16px;
+    padding: 12px 25px;
     font-weight: bold;
     text-transform: uppercase;
     cursor: pointer;
@@ -111,25 +105,4 @@ button {
 
 button:hover {
     background: #ff9900;
-}
-
-/* Adaptación para móviles */
-@media (max-width: 768px) {
-    table {
-        font-size: 12px;
-    }
-    
-    th, td {
-        padding: 8px;
-    }
-
-    header h1 {
-        font-size: 2em;
-        padding: 10px 20px;
-    }
-
-    button {
-        font-size: 16px;
-        padding: 12px 25px;
-    }
 }
