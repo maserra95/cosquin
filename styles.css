@@ -86,6 +86,35 @@ td {
     text-transform: uppercase;
 }
 
+.artist:active{
+    background: #534404;
+    color: white;
+}
+
+.artist:hover{
+    background: #534404;
+    color: white;
+}
+
+.artist2 {
+    background: rgb(98, 187, 216);
+    color: black;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+.artist2:active{
+    background: rgb(5, 61, 80);
+    color: white;
+}
+
+.artist2:hover{
+    background: rgb(5, 61, 80);
+    color: white;
+}
+
 .empty{
     background: white;
     border-radius: 5px;
